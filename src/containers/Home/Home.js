@@ -122,25 +122,6 @@ export default class Home extends Component {
               the time to highlight this. The <code>clientMiddleware</code> sends an error action which
               the <code>widgets</code> reducer picks up and saves to the Redux state for presenting to the user.
             </dd>
-            <dt>Session based login</dt>
-            <dd>
-              On the <Link to="/login">Login page</Link> you can submit a username which will be sent to the server
-              and stored in the session. Subsequent refreshes will show that you are still logged in.
-            </dd>
-            <dt>Redirect after state change</dt>
-            <dd>
-              After you log in, you will be redirected to a Login Success page. This <strike>magic</strike> logic
-              is performed in <code>componentWillReceiveProps()</code> in <code>App.js</code>, but it could
-              be done in any component that listens to the appropriate store slice, via Redux's <code>@connect</code>,
-              and pulls the router from the context.
-            </dd>
-            <dt>Auth-required views</dt>
-            <dd>
-              The aforementioned Login Success page is only visible to you if you are logged in. If you try
-              to <Link to="/loginSuccess">go there</Link> when you are not logged in, you will be forwarded back
-              to this home page. This <strike>magic</strike> logic is performed by the
-              <code>onEnter</code> hook within <code>routes.js</code>.
-            </dd>
             <dt>Forms</dt>
             <dd>
               The <Link to="/survey">Survey page</Link> uses the
