@@ -7,4 +7,3 @@
 
 export CounterButton from './CounterButton/CounterButton'
 export GithubButton from './GithubButton/GithubButton'
-export SurveyForm from './SurveyForm/SurveyForm'

@@ -4,7 +4,6 @@ import {
     App,
     Home,
     About,
-    Survey,
     NotFound,
   } from 'containers'
 
@@ -19,7 +18,6 @@ export default (store) => {
 
       { /* Routes */ }
       <Route path="about" component={About}/>
-      <Route path="survey" component={Survey}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />
