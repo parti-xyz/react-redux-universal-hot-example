@@ -3,7 +3,6 @@ import {IndexRoute, Route} from 'react-router'
 import {
     App,
     Home,
-    Widgets,
     About,
     Survey,
     NotFound,
@@ -21,7 +20,6 @@ export default (store) => {
       { /* Routes */ }
       <Route path="about" component={About}/>
       <Route path="survey" component={Survey}/>
-      <Route path="widgets" component={Widgets}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

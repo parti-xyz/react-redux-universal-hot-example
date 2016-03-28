@@ -5,7 +5,6 @@ import {reducer as reduxAsyncConnect} from 'redux-async-connect'
 
 import counter from './counter'
 import {reducer as form} from 'redux-form'
-import widgets from './widgets'
 
 export default combineReducers({
   routing: routeReducer,
@@ -15,6 +14,5 @@ export default combineReducers({
     counter1: counter,
     counter2: counter,
     counter3: counter
-  }),
-  widgets
+  })
 })

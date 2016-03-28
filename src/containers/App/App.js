@@ -42,9 +42,6 @@ export default class App extends Component {
 
           <Navbar.Collapse eventKey={0}>
             <Nav navbar>
-              <LinkContainer to="/widgets">
-                <NavItem eventKey={2}>Widgets</NavItem>
-              </LinkContainer>
               <LinkContainer to="/survey">
                 <NavItem eventKey={3}>Survey</NavItem>
               </LinkContainer>
