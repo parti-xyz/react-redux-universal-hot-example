@@ -26,14 +26,18 @@
   "scripts": {
     "build": "better-npm-run build",
     "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run start-dev\"",
+    "karma": "karma start",
     "lint": "eslint -c .eslintrc src",
+    "mocha": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
     "postinstall": "npm run build",
     "start": "concurrent --kill-others \"npm run start-prod\"",
     "start-dev": "better-npm-run start-dev",
     "start-prod": "better-npm-run start-prod",
-    "test": "karma start",
-    "test-node": "./node_modules/mocha/bin/mocha $(find test -name '*-test.js') --compilers js:babel-core/register",
-    "test-node-watch": "./node_modules/mocha/bin/mocha $(find test -name '*-test.js') --compilers js:babel-core/register --watch",
+    "test": "npm run test-node && npm run test-e2e",
+    "test-e2e": "npm run test-e2e-with -- test/e2e && npm run test-e2e-with -- --recursive test/e2e/features",
+    "test-e2e-with": "npm run mocha -- -t 15000 --ui bdd",
+    "test-node": "npm run mocha -- test/support test/features --recursive",
+    "test-node-watch": "npm run test-node -- --watch",
     "watch-client": "better-npm-run watch-client"
   },
   "betterScripts": {
