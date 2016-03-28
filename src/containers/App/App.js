@@ -8,7 +8,6 @@ import NavItem from 'react-bootstrap/lib/NavItem'
 import Helmet from 'react-helmet'
 import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info'
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth'
-import { InfoBar } from 'components'
 import { routeActions } from 'react-router-redux'
 import config from '../../config'
 import { asyncConnect } from 'redux-async-connect'
@@ -106,7 +105,6 @@ export default class App extends Component {
         <div className={styles.appContent}>
           {this.props.children}
         </div>
-        <InfoBar/>
 
         <div className="well text-center">
           Have questions? Ask for help <a
